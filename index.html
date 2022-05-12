@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -17,7 +18,7 @@
                         clifford: '#da373d',
                     },
                     height: {
-                        '128': '41rem',
+                        '128': '40rem',
                     }
                 }
             }
@@ -26,476 +27,442 @@
 </head>
 
 <body>
-    <div class="flex flex-col h-screen">
-        <!-- top bar -->
-        <div class="h-16 p-2 flex flex-row justify-start items-center ">
-            <div class="flex w-3/12">
-                <div class="border-r pr-1.5">
-                    <ion-icon name="menu-outline"
-                        class="h-8 w-8 text-white hover:bg-gray-100/20 rounded-full p-2 mr-1.5"></ion-icon>
-                </div>
-                <img src="menu_logo.png" alt="Gmail">
-                <!-- <div class="flex items-center gap-3 text-white ">
-                        <ion-icon name="mail-outline" class="w-8 h-8"></ion-icon>
-                        <span class="text-2xl">Gmail</span>
-                    </div> -->
+    <div class="flex flex-row flex-auto h-screen text-white">
+        <!-- menu -->
+        <div class="w-20 flex flex-col items-center p-2 border-r border-slate-400 font-semibold text-sm">
+            <div>
+                <ion-icon name="menu-outline" class="h-8 w-8 text-white hover:bg-gray-100/20 rounded-full p-2">
+                </ion-icon>
             </div>
-
-            <div
-                class="bg-gray-100/20 h-full w-6/12 flex items-center rounded-lg px-2 hover:bg-white hover:text-gray-500 text-white">
-                <ion-icon name="search-outline" class="h-6 w-6 hover:bg-gray-200/50 rounded-full p-2"></ion-icon>
-                <input type="text"
-                    class="focus:outline-none px-3 bg-transparent h-full w-full placeholder:text-white hover:placeholder:text-gray-500"
-                    placeholder="Search mail">
-                <ion-icon name="options-outline" class="h-6 w-6 hover:bg-gray-200/50 rounded-full p-2"></ion-icon>
+            <div class="mt-3 space-y-2">
+                <span class="flex flex-col justify-center items-center">
+                    <ion-icon name="mail-outline" class="w-6 h-6 text-gray-300 hover:bg-gray-100/20 rounded-full p-2">
+                    </ion-icon>
+                    <span>Mail</span>
+                </span>
+                <span class="flex flex-col justify-center items-center">
+                    <span class="relative inline-block">
+                        <ion-icon name="chatbox-outline"
+                            class="w-6 h-6 text-gray-300 hover:bg-gray-100/20 rounded-full fill-current p-2">
+                        </ion-icon>
+                        <span
+                            class="absolute top-2 right-1 inline-flex  px-1.5 py-1 text-xs font-bold leading-none transform translate-x-1/2 -translate-y-1/2 bg-red-600 rounded-full">2</span>
+                    </span>
+                    <span>Chat</span>
+                </span>
+                <span class="flex flex-col justify-center items-center">
+                    <ion-icon name="people-outline" class="w-6 h-6 text-gray-300 hover:bg-gray-100/20 rounded-full p-2">
+                    </ion-icon>
+                    <span>Spaces</span>
+                </span>
+                <span class="flex flex-col justify-center items-center">
+                    <ion-icon name="videocam-outline"
+                        class="w-6 h-6 text-gray-300 hover:bg-gray-100/20 rounded-full p-2"></ion-icon>
+                    <span>Meet</span>
+                </span>
             </div>
-
-            <div class="text-white h-full w-4/12 flex justify-end items-center gap-4 mx-2">
-                <div class="bg-gray-100/30 hover:bg-gray-100/50 p-2 px-4 rounded-full flex items-center gap-1">
-                    <div class="relative inline-flex rounded-full h-3 w-3 bg-green-600 ring-white ring-1 "></div>
-                    <div class="font-semibold">Active</div>
-                    <div class="flex items-baseline">
-                        <ion-icon name="caret-down-outline"></ion-icon>
+        </div>
+        <!-- 2nd menu  -->
+        <div class="w-2/12 p-2">
+            <div>
+                <img src="menu_logo.png" alt="Gmail" class="p-2">
+            </div>
+            <!-- compose -->
+            <div class="bg-white py-3 px-4 w-7/12 rounded-full flex items-center gap-4 text-gray-500 mt-3">
+                <ion-icon name="pencil-outline"></ion-icon>
+                <div class="font-semibold">Compose</div>
+            </div>
+            <!-- items -->
+            <div class="flex flex-col mt-3 text-white gap-1">
+                <div class="grid grid-cols-11 bg-gray-100/40 hover:bg-gray-100/70 rounded-full py-1 px-4 pr-1 ">
+                    <div class="col-span-2">
+                        <ion-icon name="archive-outline" class="h-5 w-5 font-bold"></ion-icon>
                     </div>
+                    <div class="col-span-6 font-semibold">Inbox</div>
+                    <div class="col-span-2 text-right">645</div>
                 </div>
-                <ion-icon name="help-circle-outline" class="w-8 h-8"></ion-icon>
-                <ion-icon name="settings-outline" class="w-6 h-6"></ion-icon>
-                <ion-icon name="apps-outline" class="w-6 h-6"></ion-icon>
-                <img src="Sathish.jpg" alt="S" class="w-8 h-8 rounded-full object-cover	object-center	">
+                <div class="grid grid-cols-11 hover:bg-gray-100/40 rounded-full py-1 px-4 pr-1">
+                    <div class="col-span-2">
+                        <ion-icon name="star-outline" class="h-5 w-5 font-bold"></ion-icon>
+                    </div>
+                    <div class="col-span-6 font-semibold">Starred</div>
+                    <div class="col-span-2 text-right">2</div>
+                </div>
+                <div class="grid grid-cols-11 hover:bg-gray-100/40 rounded-full py-1 px-4 pr-1">
+                    <div class="col-span-2">
+                        <ion-icon name="time-outline" class="h-5 w-5 font-bold"></ion-icon>
+                    </div>
+                    <div class="col-span-6 font-semibold">Snoozed</div>
+                    <div class="col-span-2 text-right"></div>
+                </div>
+                <div class="grid grid-cols-11 hover:bg-gray-100/40 rounded-full py-1 px-4 pr-1">
+                    <div class="col-span-2">
+                        <ion-icon name="send-outline" class="h-5 w-5 font-bold"></ion-icon>
+                    </div>
+                    <div class="col-span-6 font-semibold">Sent</div>
+                    <div class="col-span-2 text-right"></div>
+                </div>
+                <div class="grid grid-cols-11 hover:bg-gray-100/40 rounded-full py-1 px-4 pr-1">
+                    <div class="col-span-2">
+                        <ion-icon name="document-outline" class="h-5 w-5 font-bold"></ion-icon>
+                    </div>
+                    <div class="col-span-6 font-semibold">Draft</div>
+                    <div class="col-span-2 text-right">75</div>
+                </div>
+                <div class="grid grid-cols-11 hover:bg-gray-100/40 rounded-full py-1 px-4 pr-1">
+                    <div class="col-span-2">
+                        <ion-icon name="chevron-down-outline" class="h-5 w-5 font-bold"></ion-icon>
+                    </div>
+                    <div class="col-span-6 font-semibold">More</div>
+                    <div class="col-span-2 text-right"></div>
+                </div>
             </div>
+            <!-- labels -->
+            <div class="flex justify-between mx-2 mt-5 items-center">
+                <div class="text-sm font-semibold">LABELS</div>
+                <div>
+                    <ion-icon name="add-outline" class="h-6 w-6 hover:bg-gray-200/50 rounded-full p-2">
+                    </ion-icon>
+                </div>
+            </div>
+
         </div>
         <!-- main -->
-        <div class="w-full flex flex-auto pb-2">
-            <!-- left -->
-            <div class="w-3/12 flex px-2">
-                <!-- left 1 -->
-                <div class="w-2/12 h-full flex flex-col gap-3 text-white text-sm font-semibold border-r">
-                    <span class="gap-0 flex flex-col justify-center items-center">
-                        <ion-icon name="mail-outline"
-                            class="w-6 h-6 text-gray-300 hover:bg-gray-100/20 rounded-full p-2"></ion-icon>
-                        <span>Mail</span>
-                    </span>
-                    <span class="gap-0 flex flex-col justify-center items-center">
-                        <span class="relative inline-block">
-                            <ion-icon name="chatbox-outline"
-                                class="w-6 h-6 text-gray-300 hover:bg-gray-100/20 rounded-full fill-current p-2">
-                            </ion-icon>
-                            <span
-                                class="absolute top-2 right-1 inline-flex  px-1.5 py-1 text-xs font-bold leading-none transform translate-x-1/2 -translate-y-1/2 bg-red-600 rounded-full">2</span>
-                        </span>
-                        <span>Chat</span>
-                    </span>
-                    <span class="gap-0 flex flex-col justify-center items-center">
-                        <ion-icon name="people-outline"
-                            class="w-6 h-6 text-gray-300 hover:bg-gray-100/20 rounded-full p-2"></ion-icon>
-                        <span>Spaces</span>
-                    </span>
-                    <span class="gap-0 flex flex-col justify-center items-center">
-                        <ion-icon name="videocam-outline"
-                            class="w-6 h-6 text-gray-300 hover:bg-gray-100/20 rounded-full p-2"></ion-icon>
-                        <span>Meet</span>
-                    </span>
+        <div class="w-9/12">
+            <!-- top bar -->
+            <div class="flex flex-row justify-between mt-3 items-center">
+                <!-- search mail -->
+                <div
+                    class="bg-gray-400/40 h-full w-7/12 flex items-center rounded-lg px-2 hover:bg-white hover:text-gray-500 text-white ">
+                    <ion-icon name="search-outline" class="h-6 w-6 hover:bg-gray-200/50 rounded-full p-2"></ion-icon>
+                    <input type="text"
+                        class="focus:outline-none p-3 bg-transparent h-full w-full placeholder:text-white hover:placeholder:text-gray-500"
+                        placeholder="Search mail">
+                    <ion-icon name="options-outline" class="h-6 w-6 hover:bg-gray-200/50 rounded-full p-2"></ion-icon>
                 </div>
-                <!-- left 2 -->
-                <div class="w-10/12 p-2 text-white">
-                    <!-- compose -->
-                    <div class="bg-white py-3 px-4 w-7/12 rounded-full flex items-center gap-4 text-gray-500">
-                        <ion-icon name="pencil-outline"></ion-icon>
-                        <div class="font-semibold">Compose</div>
-                    </div>
-                    <!-- items -->
-                    <div class="flex flex-col mt-3 text-white gap-1">
-                        <div class="grid grid-cols-11 bg-gray-100/40 hover:bg-gray-100/70 rounded-full py-1 px-4 pr-1 ">
-                            <div class="col-span-2">
-                                <ion-icon name="archive-outline" class="h-5 w-5 font-bold"></ion-icon>
-                            </div>
-                            <div class="col-span-6 font-semibold">Inbox</div>
-                            <div class="col-span-2 text-right">645</div>
-                        </div>
-                        <div class="grid grid-cols-11 hover:bg-gray-100/40 rounded-full py-1 px-4 pr-1">
-                            <div class="col-span-2">
-                                <ion-icon name="star-outline" class="h-5 w-5 font-bold"></ion-icon>
-                            </div>
-                            <div class="col-span-6 font-semibold">Starred</div>
-                            <div class="col-span-2 text-right">2</div>
-                        </div>
-                        <div class="grid grid-cols-11 hover:bg-gray-100/40 rounded-full py-1 px-4 pr-1">
-                            <div class="col-span-2">
-                                <ion-icon name="time-outline" class="h-5 w-5 font-bold"></ion-icon>
-                            </div>
-                            <div class="col-span-6 font-semibold">Snoozed</div>
-                            <div class="col-span-2 text-right"></div>
-                        </div>
-                        <div class="grid grid-cols-11 hover:bg-gray-100/40 rounded-full py-1 px-4 pr-1">
-                            <div class="col-span-2">
-                                <ion-icon name="send-outline" class="h-5 w-5 font-bold"></ion-icon>
-                            </div>
-                            <div class="col-span-6 font-semibold">Sent</div>
-                            <div class="col-span-2 text-right"></div>
-                        </div>
-                        <div class="grid grid-cols-11 hover:bg-gray-100/40 rounded-full py-1 px-4 pr-1">
-                            <div class="col-span-2">
-                                <ion-icon name="document-outline" class="h-5 w-5 font-bold"></ion-icon>
-                            </div>
-                            <div class="col-span-6 font-semibold">Draft</div>
-                            <div class="col-span-2 text-right">75</div>
-                        </div>
-                        <div class="grid grid-cols-11 hover:bg-gray-100/40 rounded-full py-1 px-4 pr-1">
-                            <div class="col-span-2">
-                                <ion-icon name="chevron-down-outline" class="h-5 w-5 font-bold"></ion-icon>
-                            </div>
-                            <div class="col-span-6 font-semibold">More</div>
-                            <div class="col-span-2 text-right"></div>
-                        </div>
-                    </div>
-                    <!-- labels -->
-                    <div class="flex justify-between mx-2 mt-5">
-                        <div class="text-sm font-semibold">LABELS</div>
-                        <div>
-                            <ion-icon name="add-outline" class="h-6 w-6 hover:bg-gray-200/50 rounded-full p-2">
-                            </ion-icon>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <!-- center -->
-            <div class="bg-white w-9/12 rounded-2xl p-2 mr-2">
-                <!-- top menu -->
-                <div class="w-full py-3 p-2 flex flex-row justify-between">
-                    <div class="flex flex-row gap-4">
-                        <div class="flex gap-1 items-center">
-                            <ion-icon name="square-outline" class="w-5 h-5"></ion-icon>
+                <!-- active -->
+                <div class="text-white h-full w-5/12 flex justify-end items-center gap-4 mx-2">
+                    <div class="bg-gray-100/30 hover:bg-gray-100/50 p-2 px-4 rounded-full flex items-center gap-1">
+                        <div class="relative inline-flex rounded-full h-3 w-3 bg-green-600 ring-white ring-1 "></div>
+                        <div class="font-semibold">Active</div>
+                        <div class="flex items-baseline">
                             <ion-icon name="caret-down-outline"></ion-icon>
                         </div>
-                        <div class="flex items-center">
-                            <ion-icon name="refresh-outline" class="w-5 h-5"></ion-icon>
-                        </div>
-                        <div class="flex items-center">
-                            <ion-icon name="ellipsis-vertical-outline" class="w-5 h-5"></ion-icon>
-                        </div>
                     </div>
-                    <div class="flex gap-6">
-                        <div class="text-xs font-semibold">1-50 of 3456</div>
-                        <div class="flex gap-2 items-center">
-                            <ion-icon name="chevron-back-outline" class="w-5 h-5"></ion-icon>
-                            <ion-icon name="chevron-forward-outline" class="w-5 h-5"></ion-icon>
-                        </div>
-                    </div>
+                    <ion-icon name="help-circle-outline" class="w-8 h-8 hover:bg-gray-200/50 rounded-full p-1"></ion-icon>
+                    <ion-icon name="settings-outline" class="w-6 h-6 hover:bg-gray-200/50 rounded-full p-2"></ion-icon>
+                    <ion-icon name="apps-outline" class="w-6 h-6 hover:bg-gray-200/50 rounded-full p-2"></ion-icon>
+                    <img src="Sathish.jpg" alt="S" class="w-8 h-8 rounded-full object-cover	object-center	">
                 </div>
-                <!-- inbox box -->
-                <div class="h-128 overflow-auto ">
-                    <!-- messages 1-->
-                    <div class="w-full p-2 flex gap-2 items-center border-b hover:shadow-md">
-                        <div class="flex w-1/12 gap-2">
-                            <ion-icon name="square-outline" class="w-5 h-5 text-gray-300"></ion-icon>
-                            <ion-icon name="star-outline" class="w-4 h-4 text-gray-300"></ion-icon>
+            </div>
+            <!-- inbox -->
+            <div>
+                <div class="bg-white rounded-2xl p-2 mr-2 mt-2 mb-2 text-black">
+                    <!-- top menu -->
+                    <div class="w-full py-3 p-2 flex flex-row justify-between">
+                        <div class="flex flex-row gap-4">
+                            <div class="flex gap-1 items-center">
+                                <ion-icon name="square-outline" class="w-5 h-5"></ion-icon>
+                                <ion-icon name="caret-down-outline"></ion-icon>
+                            </div>
+                            <div class="flex items-center">
+                                <ion-icon name="refresh-outline" class="w-5 h-5"></ion-icon>
+                            </div>
+                            <div class="flex items-center">
+                                <ion-icon name="ellipsis-vertical-outline" class="w-5 h-5"></ion-icon>
+                            </div>
                         </div>
-                        <div class="w-1/12">
-                            <span class="font-semibold">Sathish M</span>
+                        <div class="flex gap-6">
+                            <div class="text-xs font-semibold">1-50 of 3456</div>
+                            <div class="flex gap-2 items-center">
+                                <ion-icon name="chevron-back-outline" class="w-5 h-5"></ion-icon>
+                                <ion-icon name="chevron-forward-outline" class="w-5 h-5"></ion-icon>
+                            </div>
                         </div>
-                        <div class="w-8/12 truncate">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolor
-                            tenetur temporibus eaque at amet porro placeat non libero asperiores, nesciunt labore fuga
-                            esse consectetur architecto expedita quas maxime officiis debitis.</div>
-                        <div class="w-1/12 text-right text-sm font-semibold">09:10 AM</div>
                     </div>
-                    <!-- messages 2-->
-                    <div class="w-full p-2 flex gap-2 items-center border-b hover:shadow-md">
-                        <div class="flex w-1/12 gap-2">
-                            <ion-icon name="square-outline" class="w-5 h-5 text-gray-300"></ion-icon>
-                            <ion-icon name="star-outline" class="w-4 h-4 text-gray-300"></ion-icon>
+                    <!-- inbox box -->
+                    <div class="h-128 overflow-auto ">
+                        <!-- messages 1-->
+                        <div class="w-full p-2 flex gap-2 items-center border-b hover:shadow-md">
+                            <div class="flex w-1/12 gap-2">
+                                <ion-icon name="square-outline" class="w-5 h-5 text-gray-300"></ion-icon>
+                                <ion-icon name="star-outline" class="w-4 h-4 text-gray-300"></ion-icon>
+                            </div>
+                            <div class="w-1/12">
+                                <span class="font-semibold">Sathish M</span>
+                            </div>
+                            <div class="w-8/12 truncate">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolor
+                                tenetur temporibus eaque at amet porro placeat non libero asperiores, nesciunt labore fuga
+                                esse consectetur architecto expedita quas maxime officiis debitis.</div>
+                            <div class="w-1/12 text-right text-sm font-semibold">09:10 AM</div>
                         </div>
-                        <div class="w-1/12">
-                            <span class="font-semibold">Sathish M</span>
+                        <!-- messages 2-->
+                        <div class="w-full p-2 flex gap-2 items-center border-b hover:shadow-md">
+                            <div class="flex w-1/12 gap-2">
+                                <ion-icon name="square-outline" class="w-5 h-5 text-gray-300"></ion-icon>
+                                <ion-icon name="star-outline" class="w-4 h-4 text-gray-300"></ion-icon>
+                            </div>
+                            <div class="w-1/12">
+                                <span class="font-semibold">Sathish M</span>
+                            </div>
+                            <div class="w-8/12 truncate">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolor
+                                tenetur temporibus eaque at amet porro placeat non libero asperiores, nesciunt labore fuga
+                                esse consectetur architecto expedita quas maxime officiis debitis.</div>
+                            <div class="w-1/12 text-right text-sm font-semibold">11:10 AM</div>
                         </div>
-                        <div class="w-8/12 truncate">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolor
-                            tenetur temporibus eaque at amet porro placeat non libero asperiores, nesciunt labore fuga
-                            esse consectetur architecto expedita quas maxime officiis debitis.</div>
-                        <div class="w-1/12 text-right text-sm font-semibold">11:10 AM</div>
-                    </div>
-                    <!-- messages 1-->
-                    <div class="w-full p-2 flex gap-2 items-center border-b hover:shadow-md">
-                        <div class="flex w-1/12 gap-2">
-                            <ion-icon name="square-outline" class="w-5 h-5 text-gray-300"></ion-icon>
-                            <ion-icon name="star-outline" class="w-4 h-4 text-gray-300"></ion-icon>
+                        <!-- messages 1-->
+                        <div class="w-full p-2 flex gap-2 items-center border-b hover:shadow-md">
+                            <div class="flex w-1/12 gap-2">
+                                <ion-icon name="square-outline" class="w-5 h-5 text-gray-300"></ion-icon>
+                                <ion-icon name="star-outline" class="w-4 h-4 text-gray-300"></ion-icon>
+                            </div>
+                            <div class="w-1/12">
+                                <span class="font-semibold">Sathish M</span>
+                            </div>
+                            <div class="w-8/12 truncate">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolor
+                                tenetur temporibus eaque at amet porro placeat non libero asperiores, nesciunt labore fuga
+                                esse consectetur architecto expedita quas maxime officiis debitis.</div>
+                            <div class="w-1/12 text-right text-sm font-semibold">09:10 AM</div>
                         </div>
-                        <div class="w-1/12">
-                            <span class="font-semibold">Sathish M</span>
+                        <!-- messages 2-->
+                        <div class="w-full p-2 flex gap-2 items-center border-b hover:shadow-md">
+                            <div class="flex w-1/12 gap-2">
+                                <ion-icon name="square-outline" class="w-5 h-5 text-gray-300"></ion-icon>
+                                <ion-icon name="star-outline" class="w-4 h-4 text-gray-300"></ion-icon>
+                            </div>
+                            <div class="w-1/12">
+                                <span class="font-semibold">Sathish M</span>
+                            </div>
+                            <div class="w-8/12 truncate">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolor
+                                tenetur temporibus eaque at amet porro placeat non libero asperiores, nesciunt labore fuga
+                                esse consectetur architecto expedita quas maxime officiis debitis.</div>
+                            <div class="w-1/12 text-right text-sm font-semibold">11:10 AM</div>
                         </div>
-                        <div class="w-8/12 truncate">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolor
-                            tenetur temporibus eaque at amet porro placeat non libero asperiores, nesciunt labore fuga
-                            esse consectetur architecto expedita quas maxime officiis debitis.</div>
-                        <div class="w-1/12 text-right text-sm font-semibold">09:10 AM</div>
-                    </div>
-                    <!-- messages 2-->
-                    <div class="w-full p-2 flex gap-2 items-center border-b hover:shadow-md">
-                        <div class="flex w-1/12 gap-2">
-                            <ion-icon name="square-outline" class="w-5 h-5 text-gray-300"></ion-icon>
-                            <ion-icon name="star-outline" class="w-4 h-4 text-gray-300"></ion-icon>
+                        <!-- messages 1-->
+                        <div class="w-full p-2 flex gap-2 items-center border-b hover:shadow-md">
+                            <div class="flex w-1/12 gap-2">
+                                <ion-icon name="square-outline" class="w-5 h-5 text-gray-300"></ion-icon>
+                                <ion-icon name="star-outline" class="w-4 h-4 text-gray-300"></ion-icon>
+                            </div>
+                            <div class="w-1/12">
+                                <span class="font-semibold">Sathish M</span>
+                            </div>
+                            <div class="w-8/12 truncate">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolor
+                                tenetur temporibus eaque at amet porro placeat non libero asperiores, nesciunt labore fuga
+                                esse consectetur architecto expedita quas maxime officiis debitis.</div>
+                            <div class="w-1/12 text-right text-sm font-semibold">09:10 AM</div>
                         </div>
-                        <div class="w-1/12">
-                            <span class="font-semibold">Sathish M</span>
+                        <!-- messages 2-->
+                        <div class="w-full p-2 flex gap-2 items-center border-b hover:shadow-md">
+                            <div class="flex w-1/12 gap-2">
+                                <ion-icon name="square-outline" class="w-5 h-5 text-gray-300"></ion-icon>
+                                <ion-icon name="star-outline" class="w-4 h-4 text-gray-300"></ion-icon>
+                            </div>
+                            <div class="w-1/12">
+                                <span class="font-semibold">Sathish M</span>
+                            </div>
+                            <div class="w-8/12 truncate">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolor
+                                tenetur temporibus eaque at amet porro placeat non libero asperiores, nesciunt labore fuga
+                                esse consectetur architecto expedita quas maxime officiis debitis.</div>
+                            <div class="w-1/12 text-right text-sm font-semibold">11:10 AM</div>
                         </div>
-                        <div class="w-8/12 truncate">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolor
-                            tenetur temporibus eaque at amet porro placeat non libero asperiores, nesciunt labore fuga
-                            esse consectetur architecto expedita quas maxime officiis debitis.</div>
-                        <div class="w-1/12 text-right text-sm font-semibold">11:10 AM</div>
-                    </div>
-                    <!-- messages 1-->
-                    <div class="w-full p-2 flex gap-2 items-center border-b hover:shadow-md">
-                        <div class="flex w-1/12 gap-2">
-                            <ion-icon name="square-outline" class="w-5 h-5 text-gray-300"></ion-icon>
-                            <ion-icon name="star-outline" class="w-4 h-4 text-gray-300"></ion-icon>
+                        <!-- messages 1-->
+                        <div class="w-full p-2 flex gap-2 items-center border-b hover:shadow-md">
+                            <div class="flex w-1/12 gap-2">
+                                <ion-icon name="square-outline" class="w-5 h-5 text-gray-300"></ion-icon>
+                                <ion-icon name="star-outline" class="w-4 h-4 text-gray-300"></ion-icon>
+                            </div>
+                            <div class="w-1/12">
+                                <span class="font-semibold">Sathish M</span>
+                            </div>
+                            <div class="w-8/12 truncate">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolor
+                                tenetur temporibus eaque at amet porro placeat non libero asperiores, nesciunt labore fuga
+                                esse consectetur architecto expedita quas maxime officiis debitis.</div>
+                            <div class="w-1/12 text-right text-sm font-semibold">09:10 AM</div>
                         </div>
-                        <div class="w-1/12">
-                            <span class="font-semibold">Sathish M</span>
+                        <!-- messages 2-->
+                        <div class="w-full p-2 flex gap-2 items-center border-b hover:shadow-md">
+                            <div class="flex w-1/12 gap-2">
+                                <ion-icon name="square-outline" class="w-5 h-5 text-gray-300"></ion-icon>
+                                <ion-icon name="star-outline" class="w-4 h-4 text-gray-300"></ion-icon>
+                            </div>
+                            <div class="w-1/12">
+                                <span class="font-semibold">Sathish M</span>
+                            </div>
+                            <div class="w-8/12 truncate">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolor
+                                tenetur temporibus eaque at amet porro placeat non libero asperiores, nesciunt labore fuga
+                                esse consectetur architecto expedita quas maxime officiis debitis.</div>
+                            <div class="w-1/12 text-right text-sm font-semibold">11:10 AM</div>
                         </div>
-                        <div class="w-8/12 truncate">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolor
-                            tenetur temporibus eaque at amet porro placeat non libero asperiores, nesciunt labore fuga
-                            esse consectetur architecto expedita quas maxime officiis debitis.</div>
-                        <div class="w-1/12 text-right text-sm font-semibold">09:10 AM</div>
-                    </div>
-                    <!-- messages 2-->
-                    <div class="w-full p-2 flex gap-2 items-center border-b hover:shadow-md">
-                        <div class="flex w-1/12 gap-2">
-                            <ion-icon name="square-outline" class="w-5 h-5 text-gray-300"></ion-icon>
-                            <ion-icon name="star-outline" class="w-4 h-4 text-gray-300"></ion-icon>
+                        <!-- messages 1-->
+                        <div class="w-full p-2 flex gap-2 items-center border-b hover:shadow-md">
+                            <div class="flex w-1/12 gap-2">
+                                <ion-icon name="square-outline" class="w-5 h-5 text-gray-300"></ion-icon>
+                                <ion-icon name="star-outline" class="w-4 h-4 text-gray-300"></ion-icon>
+                            </div>
+                            <div class="w-1/12">
+                                <span class="font-semibold">Sathish M</span>
+                            </div>
+                            <div class="w-8/12 truncate">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolor
+                                tenetur temporibus eaque at amet porro placeat non libero asperiores, nesciunt labore fuga
+                                esse consectetur architecto expedita quas maxime officiis debitis.</div>
+                            <div class="w-1/12 text-right text-sm font-semibold">Aprl 21</div>
                         </div>
-                        <div class="w-1/12">
-                            <span class="font-semibold">Sathish M</span>
+                        <!-- messages 2-->
+                        <div class="w-full p-2 flex gap-2 items-center border-b hover:shadow-md">
+                            <div class="flex w-1/12 gap-2">
+                                <ion-icon name="square-outline" class="w-5 h-5 text-gray-300"></ion-icon>
+                                <ion-icon name="star-outline" class="w-4 h-4 text-gray-300"></ion-icon>
+                            </div>
+                            <div class="w-1/12">
+                                <span class="font-semibold">Sathish M</span>
+                            </div>
+                            <div class="w-8/12 truncate">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolor
+                                tenetur temporibus eaque at amet porro placeat non libero asperiores, nesciunt labore fuga
+                                esse consectetur architecto expedita quas maxime officiis debitis.</div>
+                            <div class="w-1/12 text-right text-sm font-semibold">   Aprl 24</div>
                         </div>
-                        <div class="w-8/12 truncate">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolor
-                            tenetur temporibus eaque at amet porro placeat non libero asperiores, nesciunt labore fuga
-                            esse consectetur architecto expedita quas maxime officiis debitis.</div>
-                        <div class="w-1/12 text-right text-sm font-semibold">11:10 AM</div>
-                    </div>
-                    <!-- messages 1-->
-                    <div class="w-full p-2 flex gap-2 items-center border-b hover:shadow-md">
-                        <div class="flex w-1/12 gap-2">
-                            <ion-icon name="square-outline" class="w-5 h-5 text-gray-300"></ion-icon>
-                            <ion-icon name="star-outline" class="w-4 h-4 text-gray-300"></ion-icon>
+                        <!-- messages 2-->
+                        <div class="w-full p-2 flex gap-2 items-center border-b hover:shadow-md">
+                            <div class="flex w-1/12 gap-2">
+                                <ion-icon name="square-outline" class="w-5 h-5 text-gray-300"></ion-icon>
+                                <ion-icon name="star-outline" class="w-4 h-4 text-gray-300"></ion-icon>
+                            </div>
+                            <div class="w-1/12">
+                                <span class="font-semibold">Sathish M</span>
+                            </div>
+                            <div class="w-8/12 truncate">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolor
+                                tenetur temporibus eaque at amet porro placeat non libero asperiores, nesciunt labore fuga
+                                esse consectetur architecto expedita quas maxime officiis debitis.</div>
+                            <div class="w-1/12 text-right text-sm font-semibold">   Aprl 24</div>
                         </div>
-                        <div class="w-1/12">
-                            <span class="font-semibold">Sathish M</span>
+                        <!-- messages 2-->
+                        <div class="w-full p-2 flex gap-2 items-center border-b hover:shadow-md">
+                            <div class="flex w-1/12 gap-2">
+                                <ion-icon name="square-outline" class="w-5 h-5 text-gray-300"></ion-icon>
+                                <ion-icon name="star-outline" class="w-4 h-4 text-gray-300"></ion-icon>
+                            </div>
+                            <div class="w-1/12">
+                                <span class="font-semibold">Sathish M</span>
+                            </div>
+                            <div class="w-8/12 truncate">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolor
+                                tenetur temporibus eaque at amet porro placeat non libero asperiores, nesciunt labore fuga
+                                esse consectetur architecto expedita quas maxime officiis debitis.</div>
+                            <div class="w-1/12 text-right text-sm font-semibold">   Aprl 24</div>
                         </div>
-                        <div class="w-8/12 truncate">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolor
-                            tenetur temporibus eaque at amet porro placeat non libero asperiores, nesciunt labore fuga
-                            esse consectetur architecto expedita quas maxime officiis debitis.</div>
-                        <div class="w-1/12 text-right text-sm font-semibold">09:10 AM</div>
-                    </div>
-                    <!-- messages 2-->
-                    <div class="w-full p-2 flex gap-2 items-center border-b hover:shadow-md">
-                        <div class="flex w-1/12 gap-2">
-                            <ion-icon name="square-outline" class="w-5 h-5 text-gray-300"></ion-icon>
-                            <ion-icon name="star-outline" class="w-4 h-4 text-gray-300"></ion-icon>
+                        <!-- messages 2-->
+                        <div class="w-full p-2 flex gap-2 items-center border-b hover:shadow-md">
+                            <div class="flex w-1/12 gap-2">
+                                <ion-icon name="square-outline" class="w-5 h-5 text-gray-300"></ion-icon>
+                                <ion-icon name="star-outline" class="w-4 h-4 text-gray-300"></ion-icon>
+                            </div>
+                            <div class="w-1/12">
+                                <span class="font-semibold">Sathish M</span>
+                            </div>
+                            <div class="w-8/12 truncate">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolor
+                                tenetur temporibus eaque at amet porro placeat non libero asperiores, nesciunt labore fuga
+                                esse consectetur architecto expedita quas maxime officiis debitis.</div>
+                            <div class="w-1/12 text-right text-sm font-semibold">   Aprl 24</div>
                         </div>
-                        <div class="w-1/12">
-                            <span class="font-semibold">Sathish M</span>
+                        <!-- messages 2-->
+                        <div class="w-full p-2 flex gap-2 items-center border-b hover:shadow-md">
+                            <div class="flex w-1/12 gap-2">
+                                <ion-icon name="square-outline" class="w-5 h-5 text-gray-300"></ion-icon>
+                                <ion-icon name="star-outline" class="w-4 h-4 text-gray-300"></ion-icon>
+                            </div>
+                            <div class="w-1/12">
+                                <span class="font-semibold">Sathish M</span>
+                            </div>
+                            <div class="w-8/12 truncate">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolor
+                                tenetur temporibus eaque at amet porro placeat non libero asperiores, nesciunt labore fuga
+                                esse consectetur architecto expedita quas maxime officiis debitis.</div>
+                            <div class="w-1/12 text-right text-sm font-semibold">   Aprl 24</div>
                         </div>
-                        <div class="w-8/12 truncate">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolor
-                            tenetur temporibus eaque at amet porro placeat non libero asperiores, nesciunt labore fuga
-                            esse consectetur architecto expedita quas maxime officiis debitis.</div>
-                        <div class="w-1/12 text-right text-sm font-semibold">11:10 AM</div>
-                    </div>
-                    <!-- messages 1-->
-                    <div class="w-full p-2 flex gap-2 items-center border-b hover:shadow-md">
-                        <div class="flex w-1/12 gap-2">
-                            <ion-icon name="square-outline" class="w-5 h-5 text-gray-300"></ion-icon>
-                            <ion-icon name="star-outline" class="w-4 h-4 text-gray-300"></ion-icon>
+                        <!-- messages 2-->
+                        <div class="w-full p-2 flex gap-2 items-center border-b hover:shadow-md">
+                            <div class="flex w-1/12 gap-2">
+                                <ion-icon name="square-outline" class="w-5 h-5 text-gray-300"></ion-icon>
+                                <ion-icon name="star-outline" class="w-4 h-4 text-gray-300"></ion-icon>
+                            </div>
+                            <div class="w-1/12">
+                                <span class="font-semibold">Sathish M</span>
+                            </div>
+                            <div class="w-8/12 truncate">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolor
+                                tenetur temporibus eaque at amet porro placeat non libero asperiores, nesciunt labore fuga
+                                esse consectetur architecto expedita quas maxime officiis debitis.</div>
+                            <div class="w-1/12 text-right text-sm font-semibold">   Aprl 24</div>
                         </div>
-                        <div class="w-1/12">
-                            <span class="font-semibold">Sathish M</span>
+                        <!-- messages 2-->
+                        <div class="w-full p-2 flex gap-2 items-center border-b hover:shadow-md">
+                            <div class="flex w-1/12 gap-2">
+                                <ion-icon name="square-outline" class="w-5 h-5 text-gray-300"></ion-icon>
+                                <ion-icon name="star-outline" class="w-4 h-4 text-gray-300"></ion-icon>
+                            </div>
+                            <div class="w-1/12">
+                                <span class="font-semibold">Sathish M</span>
+                            </div>
+                            <div class="w-8/12 truncate">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolor
+                                tenetur temporibus eaque at amet porro placeat non libero asperiores, nesciunt labore fuga
+                                esse consectetur architecto expedita quas maxime officiis debitis.</div>
+                            <div class="w-1/12 text-right text-sm font-semibold">   Aprl 24</div>
                         </div>
-                        <div class="w-8/12 truncate">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolor
-                            tenetur temporibus eaque at amet porro placeat non libero asperiores, nesciunt labore fuga
-                            esse consectetur architecto expedita quas maxime officiis debitis.</div>
-                        <div class="w-1/12 text-right text-sm font-semibold">09:10 AM</div>
-                    </div>
-                    <!-- messages 2-->
-                    <div class="w-full p-2 flex gap-2 items-center border-b hover:shadow-md">
-                        <div class="flex w-1/12 gap-2">
-                            <ion-icon name="square-outline" class="w-5 h-5 text-gray-300"></ion-icon>
-                            <ion-icon name="star-outline" class="w-4 h-4 text-gray-300"></ion-icon>
+                        <!-- messages 2-->
+                        <div class="w-full p-2 flex gap-2 items-center border-b hover:shadow-md">
+                            <div class="flex w-1/12 gap-2">
+                                <ion-icon name="square-outline" class="w-5 h-5 text-gray-300"></ion-icon>
+                                <ion-icon name="star-outline" class="w-4 h-4 text-gray-300"></ion-icon>
+                            </div>
+                            <div class="w-1/12">
+                                <span class="font-semibold">Sathish M</span>
+                            </div>
+                            <div class="w-8/12 truncate">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolor
+                                tenetur temporibus eaque at amet porro placeat non libero asperiores, nesciunt labore fuga
+                                esse consectetur architecto expedita quas maxime officiis debitis.</div>
+                            <div class="w-1/12 text-right text-sm font-semibold">   Aprl 24</div>
                         </div>
-                        <div class="w-1/12">
-                            <span class="font-semibold">Sathish M</span>
+                        <!-- messages 2-->
+                        <div class="w-full p-2 flex gap-2 items-center border-b hover:shadow-md">
+                            <div class="flex w-1/12 gap-2">
+                                <ion-icon name="square-outline" class="w-5 h-5 text-gray-300"></ion-icon>
+                                <ion-icon name="star-outline" class="w-4 h-4 text-gray-300"></ion-icon>
+                            </div>
+                            <div class="w-1/12">
+                                <span class="font-semibold">Sathish M</span>
+                            </div>
+                            <div class="w-8/12 truncate">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolor
+                                tenetur temporibus eaque at amet porro placeat non libero asperiores, nesciunt labore fuga
+                                esse consectetur architecto expedita quas maxime officiis debitis.</div>
+                            <div class="w-1/12 text-right text-sm font-semibold">   Aprl 24</div>
                         </div>
-                        <div class="w-8/12 truncate">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolor
-                            tenetur temporibus eaque at amet porro placeat non libero asperiores, nesciunt labore fuga
-                            esse consectetur architecto expedita quas maxime officiis debitis.</div>
-                        <div class="w-1/12 text-right text-sm font-semibold">11:10 AM</div>
-                    </div>
-                    <!-- messages 1-->
-                    <div class="w-full p-2 flex gap-2 items-center border-b hover:shadow-md">
-                        <div class="flex w-1/12 gap-2">
-                            <ion-icon name="square-outline" class="w-5 h-5 text-gray-300"></ion-icon>
-                            <ion-icon name="star-outline" class="w-4 h-4 text-gray-300"></ion-icon>
+                        <!-- messages 2-->
+                        <div class="w-full p-2 flex gap-2 items-center border-b hover:shadow-md">
+                            <div class="flex w-1/12 gap-2">
+                                <ion-icon name="square-outline" class="w-5 h-5 text-gray-300"></ion-icon>
+                                <ion-icon name="star-outline" class="w-4 h-4 text-gray-300"></ion-icon>
+                            </div>
+                            <div class="w-1/12">
+                                <span class="font-semibold">Sathish M</span>
+                            </div>
+                            <div class="w-8/12 truncate">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolor
+                                tenetur temporibus eaque at amet porro placeat non libero asperiores, nesciunt labore fuga
+                                esse consectetur architecto expedita quas maxime officiis debitis.</div>
+                            <div class="w-1/12 text-right text-sm font-semibold">   Aprl 24</div>
                         </div>
-                        <div class="w-1/12">
-                            <span class="font-semibold">Sathish M</span>
-                        </div>
-                        <div class="w-8/12 truncate">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolor
-                            tenetur temporibus eaque at amet porro placeat non libero asperiores, nesciunt labore fuga
-                            esse consectetur architecto expedita quas maxime officiis debitis.</div>
-                        <div class="w-1/12 text-right text-sm font-semibold">09:10 AM</div>
-                    </div>
-                    <!-- messages 2-->
-                    <div class="w-full p-2 flex gap-2 items-center border-b hover:shadow-md">
-                        <div class="flex w-1/12 gap-2">
-                            <ion-icon name="square-outline" class="w-5 h-5 text-gray-300"></ion-icon>
-                            <ion-icon name="star-outline" class="w-4 h-4 text-gray-300"></ion-icon>
-                        </div>
-                        <div class="w-1/12">
-                            <span class="font-semibold">Sathish M</span>
-                        </div>
-                        <div class="w-8/12 truncate">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolor
-                            tenetur temporibus eaque at amet porro placeat non libero asperiores, nesciunt labore fuga
-                            esse consectetur architecto expedita quas maxime officiis debitis.</div>
-                        <div class="w-1/12 text-right text-sm font-semibold">11:10 AM</div>
-                    </div>
-                    <!-- messages 1-->
-                    <div class="w-full p-2 flex gap-2 items-center border-b hover:shadow-md">
-                        <div class="flex w-1/12 gap-2">
-                            <ion-icon name="square-outline" class="w-5 h-5 text-gray-300"></ion-icon>
-                            <ion-icon name="star-outline" class="w-4 h-4 text-gray-300"></ion-icon>
-                        </div>
-                        <div class="w-1/12">
-                            <span class="font-semibold">Sathish M</span>
-                        </div>
-                        <div class="w-8/12 truncate">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolor
-                            tenetur temporibus eaque at amet porro placeat non libero asperiores, nesciunt labore fuga
-                            esse consectetur architecto expedita quas maxime officiis debitis.</div>
-                        <div class="w-1/12 text-right text-sm font-semibold">09:10 AM</div>
-                    </div>
-                    <!-- messages 2-->
-                    <div class="w-full p-2 flex gap-2 items-center border-b hover:shadow-md">
-                        <div class="flex w-1/12 gap-2">
-                            <ion-icon name="square-outline" class="w-5 h-5 text-gray-300"></ion-icon>
-                            <ion-icon name="star-outline" class="w-4 h-4 text-gray-300"></ion-icon>
-                        </div>
-                        <div class="w-1/12">
-                            <span class="font-semibold">Sathish M</span>
-                        </div>
-                        <div class="w-8/12 truncate">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolor
-                            tenetur temporibus eaque at amet porro placeat non libero asperiores, nesciunt labore fuga
-                            esse consectetur architecto expedita quas maxime officiis debitis.</div>
-                        <div class="w-1/12 text-right text-sm font-semibold">11:10 AM</div>
-                    </div>
-                    <!-- messages 1-->
-                    <div class="w-full p-2 flex gap-2 items-center border-b hover:shadow-md">
-                        <div class="flex w-1/12 gap-2">
-                            <ion-icon name="square-outline" class="w-5 h-5 text-gray-300"></ion-icon>
-                            <ion-icon name="star-outline" class="w-4 h-4 text-gray-300"></ion-icon>
-                        </div>
-                        <div class="w-1/12">
-                            <span class="font-semibold">Sathish M</span>
-                        </div>
-                        <div class="w-8/12 truncate">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolor
-                            tenetur temporibus eaque at amet porro placeat non libero asperiores, nesciunt labore fuga
-                            esse consectetur architecto expedita quas maxime officiis debitis.</div>
-                        <div class="w-1/12 text-right text-sm font-semibold">09:10 AM</div>
-                    </div>
-                    <!-- messages 2-->
-                    <div class="w-full p-2 flex gap-2 items-center border-b hover:shadow-md">
-                        <div class="flex w-1/12 gap-2">
-                            <ion-icon name="square-outline" class="w-5 h-5 text-gray-300"></ion-icon>
-                            <ion-icon name="star-outline" class="w-4 h-4 text-gray-300"></ion-icon>
-                        </div>
-                        <div class="w-1/12">
-                            <span class="font-semibold">Sathish M</span>
-                        </div>
-                        <div class="w-8/12 truncate">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolor
-                            tenetur temporibus eaque at amet porro placeat non libero asperiores, nesciunt labore fuga
-                            esse consectetur architecto expedita quas maxime officiis debitis.</div>
-                        <div class="w-1/12 text-right text-sm font-semibold">11:10 AM</div>
-                    </div>
-                    <!-- messages 1-->
-                    <div class="w-full p-2 flex gap-2 items-center border-b hover:shadow-md">
-                        <div class="flex w-1/12 gap-2">
-                            <ion-icon name="square-outline" class="w-5 h-5 text-gray-300"></ion-icon>
-                            <ion-icon name="star-outline" class="w-4 h-4 text-gray-300"></ion-icon>
-                        </div>
-                        <div class="w-1/12">
-                            <span class="font-semibold">Sathish M</span>
-                        </div>
-                        <div class="w-8/12 truncate">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolor
-                            tenetur temporibus eaque at amet porro placeat non libero asperiores, nesciunt labore fuga
-                            esse consectetur architecto expedita quas maxime officiis debitis.</div>
-                        <div class="w-1/12 text-right text-sm font-semibold">09:10 AM</div>
-                    </div>
-                    <!-- messages 2-->
-                    <div class="w-full p-2 flex gap-2 items-center border-b hover:shadow-md">
-                        <div class="flex w-1/12 gap-2">
-                            <ion-icon name="square-outline" class="w-5 h-5 text-gray-300"></ion-icon>
-                            <ion-icon name="star-outline" class="w-4 h-4 text-gray-300"></ion-icon>
-                        </div>
-                        <div class="w-1/12">
-                            <span class="font-semibold">Sathish M</span>
-                        </div>
-                        <div class="w-8/12 truncate">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolor
-                            tenetur temporibus eaque at amet porro placeat non libero asperiores, nesciunt labore fuga
-                            esse consectetur architecto expedita quas maxime officiis debitis.</div>
-                        <div class="w-1/12 text-right text-sm font-semibold">11:10 AM</div>
-                    </div>
-                    <!-- messages 1-->
-                    <div class="w-full p-2 flex gap-2 items-center border-b hover:shadow-md">
-                        <div class="flex w-1/12 gap-2">
-                            <ion-icon name="square-outline" class="w-5 h-5 text-gray-300"></ion-icon>
-                            <ion-icon name="star-outline" class="w-4 h-4 text-gray-300"></ion-icon>
-                        </div>
-                        <div class="w-1/12">
-                            <span class="font-semibold">Sathish M</span>
-                        </div>
-                        <div class="w-8/12 truncate">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolor
-                            tenetur temporibus eaque at amet porro placeat non libero asperiores, nesciunt labore fuga
-                            esse consectetur architecto expedita quas maxime officiis debitis.</div>
-                        <div class="w-1/12 text-right text-sm font-semibold">09:10 AM</div>
-                    </div>
-                    <!-- messages 2-->
-                    <div class="w-full p-2 flex gap-2 items-center border-b hover:shadow-md">
-                        <div class="flex w-1/12 gap-2">
-                            <ion-icon name="square-outline" class="w-5 h-5 text-gray-300"></ion-icon>
-                            <ion-icon name="star-outline" class="w-4 h-4 text-gray-300"></ion-icon>
-                        </div>
-                        <div class="w-1/12">
-                            <span class="font-semibold">Sathish M</span>
-                        </div>
-                        <div class="w-8/12 truncate">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolor
-                            tenetur temporibus eaque at amet porro placeat non libero asperiores, nesciunt labore fuga
-                            esse consectetur architecto expedita quas maxime officiis debitis.</div>
-                        <div class="w-1/12 text-right text-sm font-semibold">11:10 AM</div>
-                    </div>
-                    <!-- messages 1-->
-                    <div class="w-full p-2 flex gap-2 items-center border-b hover:shadow-md">
-                        <div class="flex w-1/12 gap-2">
-                            <ion-icon name="square-outline" class="w-5 h-5 text-gray-300"></ion-icon>
-                            <ion-icon name="star-outline" class="w-4 h-4 text-gray-300"></ion-icon>
-                        </div>
-                        <div class="w-1/12">
-                            <span class="font-semibold">Sathish M</span>
-                        </div>
-                        <div class="w-8/12 truncate">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolor
-                            tenetur temporibus eaque at amet porro placeat non libero asperiores, nesciunt labore fuga
-                            esse consectetur architecto expedita quas maxime officiis debitis.</div>
-                        <div class="w-1/12 text-right text-sm font-semibold">09:10 AM</div>
-                    </div>
-                    <!-- messages 2-->
-                    <div class="w-full p-2 flex gap-2 items-center border-b hover:shadow-md">
-                        <div class="flex w-1/12 gap-2">
-                            <ion-icon name="square-outline" class="w-5 h-5 text-gray-300"></ion-icon>
-                            <ion-icon name="star-outline" class="w-4 h-4 text-gray-300"></ion-icon>
-                        </div>
-                        <div class="w-1/12">
-                            <span class="font-semibold">Sathish M</span>
-                        </div>
-                        <div class="w-8/12 truncate">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolor
-                            tenetur temporibus eaque at amet porro placeat non libero asperiores, nesciunt labore fuga
-                            esse consectetur architecto expedita quas maxime officiis debitis.</div>
-                        <div class="w-1/12 text-right text-sm font-semibold">11:10 AM</div>
+                        
                     </div>
                 </div>
             </div>
         </div>
-
+        <!-- right  -->
+        <div class="w-16 items-center p-2 border-r font-semibold text-sm">
+            <div class="h-8 w-8"></div>
+            <div class="mt-5 space-y-5">
+                <ion-icon name="calendar-clear-outline" class="w-6 h-6 hover:bg-gray-100/20 rounded-full p-2"></ion-icon>
+                <ion-icon name="bulb-outline" class="w-6 h-6 hover:bg-gray-100/20 rounded-full p-2"></ion-icon>
+                <ion-icon name="checkmark-circle-outline" class="w-6 h-6 hover:bg-gray-100/20 rounded-full p-2"></ion-icon>
+                <ion-icon name="person-circle-outline"  class="w-6 h-6 hover:bg-gray-100/20 rounded-full p-2"></ion-icon>
+            </div>
+        </div>
     </div>
 </body>
 
